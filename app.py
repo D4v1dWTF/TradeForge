@@ -1104,7 +1104,7 @@ with tab6:
         # Create backup
         if st.button("💾 Create Backup", width='stretch'):
             with tempfile.NamedTemporaryFile(delete=False, suffix=".zip") as tmp_file:
-                if DataExporter.create_backup_zip("trades.db", tmp_file.name):
+                if DataExporter.create_backup_zip(st.session_state.db.db_path, tmp_file.name):
                     with open(tmp_file.name, "rb") as file:
                         st.download_button(
                             label="Download Backup",
@@ -1176,8 +1176,16 @@ with tab6:
             st.metric("Trading Days", date_range)
         
         with col4:
-            db_size = os.path.getsize("trades.db") / 1024  # KB
-            st.metric("Database Size", f"{db_size:.1f} KB")
+            # Get database size safely
+            try:
+                db_path = st.session_state.db.db_path
+                if os.path.exists(db_path):
+                    db_size = os.path.getsize(db_path) / 1024  # KB
+                    st.metric("Database Size", f"{db_size:.1f} KB")
+                else:
+                    st.metric("Database Size", "0 KB")
+            except:
+                st.metric("Database Size", "N/A")
 
 # Tab 7: About
 with tab7:
@@ -1229,7 +1237,7 @@ with tab7:
     
     ### 🔧 Configuration
     
-    - **Database**: `trades.db` in the project root
+    - **Database**: User-specific database files (e.g., `trades_username.db`)
     - **Port**: Default Streamlit port (8501)
     - **Theme**: Light/Dark mode support
     - **Mobile**: Responsive design for local viewing
