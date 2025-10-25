@@ -1222,18 +1222,6 @@ with tab7:
     4. **View Analysis**: Check the Analysis tab for metrics
     5. **Explore Charts**: Use the Charts tab for visualizations
     
-    ### 📁 File Structure
-    
-    ```
-    TradeForge/
-    ├── app.py              # Main Streamlit application
-    ├── data.py             # Database models and operations
-    ├── utils.py            # Utility functions and calculations
-    ├── charts.py           # Plotly chart generation
-    ├── requirements.txt    # Python dependencies
-    ├── README.md          # Documentation
-    └── .gitignore         # Git ignore rules
-    ```
     
     ### 🔧 Configuration
     
