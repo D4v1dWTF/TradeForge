@@ -70,18 +70,6 @@ For Windows users, you can use the provided setup script:
 2. **Run the app directly**
 3. **Follow the on-screen instructions**
 
-## 📁 Project Structure
-
-```
-TradeForge/
-├── app.py              # Main Streamlit application
-├── data.py             # Database models and operations
-├── utils.py            # Utility functions and calculations
-├── charts.py           # Plotly chart generation
-├── requirements.txt    # Python dependencies
-├── README.md          # This file
-└── .gitignore         # Git ignore rules
-```
 
 ## 🎮 Usage Guide
 
