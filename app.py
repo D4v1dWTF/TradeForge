@@ -928,7 +928,7 @@ with tab5:
         
         daily_pnl['total_pnl'] = daily_pnl['realized_pnl'] + daily_pnl['unrealized_pnl']
         
-        # Rename columns but keep Date as datetime
+        # Rename columns and ensure Date is datetime
         daily_pnl = daily_pnl.rename(columns={
             'date_only': 'Date',
             'realized_pnl': 'Realized P&L',
@@ -937,6 +937,9 @@ with tab5:
             'ticker': 'Trade Count',
             'total_pnl': 'Total P&L'
         })
+        
+        # Ensure Date column is datetime
+        daily_pnl['Date'] = pd.to_datetime(daily_pnl['Date'])
         
         # Filter by selected period
         if view_type == "Monthly" and month:
