@@ -80,8 +80,7 @@ TradeForge/
 ├── charts.py           # Plotly chart generation
 ├── requirements.txt    # Python dependencies
 ├── README.md          # This file
-├── .gitignore         # Git ignore rules
-└── trades.db          # SQLite database (created on first run)
+└── .gitignore         # Git ignore rules
 ```
 
 ## 🎮 Usage Guide
@@ -142,7 +141,7 @@ TradeForge/
 ## 🔧 Configuration
 
 ### Database
-- **Location**: `trades.db` in the project root
+- **Location**: User-specific database files (e.g., `trades_username.db`)
 - **Type**: SQLite (no setup required)
 - **Backup**: Use the Data Management tab
 
@@ -231,7 +230,7 @@ streamlit run app.py --server.port 8502
 
 **Database locked**
 - Close any other instances of the app
-- Check if `trades.db` is being used by another process
+- Check if database files are being used by another process
 
 **Import errors**
 ```bash
@@ -283,13 +282,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [ ] Social features
 - [ ] Plugin system
 
-## 📞 Support
 
-- **GitHub Issues**: [Create an issue](https://github.com/yourusername/tradeforge/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/tradeforge/discussions)
-- **Email**: support@tradeforge.app
-
----
 
 **Happy Trading! 📈**
 
