@@ -7,6 +7,10 @@
 
 **TradeForge** is a free, open-source trading journal desktop application designed to be a local alternative to TradesViz with all premium features unlocked. It runs entirely on your local machine with no internet dependency for core functionality.
 
+## 🌐 Live Demo
+
+Try TradeForge online: **[https://tradeforge.streamlit.app/](https://tradeforge.streamlit.app/)**
+
 ## ✨ Features
 
 ### 🎯 Core Functionality
